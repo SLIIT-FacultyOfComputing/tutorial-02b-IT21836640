@@ -17,7 +17,7 @@ printf("Hello World") --> std::cout << "Hello World";
 2.54cm = 1 inch
 */
 
-
+/*
 #include <stdio.h>
 int main() 
 {
@@ -28,3 +28,41 @@ int main()
     printf("Length in inches is %f \n", inches);
     return 0;
 }  
+*/
+
+#include <iostream>
+using namespace std;
+
+long Factorial(int no);
+long nCr(int n, int r);
+
+int main() {
+  int n, r;
+  std::cout << "Enter a value for n ";
+  std::cin >> n;
+  std::cout << "Enter a value for r ";
+  std::cin >> r;
+  std::cout << "nCr = ";
+  std::cout << nCr(n,r);
+  std::cout << std::endl;
+  return 0;
+}
+
+long Factorial(int no)
+{
+  long fac;
+
+  fac = 1;
+  for (int r=no; r >= 1; r--) {
+  fac = fac * r;
+    }
+ 
+  return fac;
+}
+
+long nCr(int n, int r)
+{
+  long ncr;
+  ncr=factorial(n)/(factorial(r)*factorial(n-r));
+  return  ncr;
+}
